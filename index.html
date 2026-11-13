@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Learn App</title>
+  <meta name="description" content="A simple, offline-ready learning app.">
+  <meta name="theme-color" content="#0b1f3a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Learn App">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="home" class="screen">
+    <header>
+      <h1>Learn App</h1>
+      <p class="tagline">Pick something to get started.</p>
+    </header>
+
+    <nav class="buttons" aria-label="Main menu">
+      <button type="button" class="big-button" data-target="lessons">Start Learning</button>
+      <button type="button" class="big-button" data-target="practice">Practice</button>
+      <button type="button" class="big-button" data-target="progress">My Progress</button>
+      <button type="button" class="big-button" data-target="about">About</button>
+    </nav>
+
+    <p id="status" class="status" role="status"></p>
+  </main>
+
+  <section id="panel" class="screen" hidden aria-live="polite">
+    <button type="button" id="back" class="big-button back">&larr; Back</button>
+    <h2 id="panel-title"></h2>
+    <p id="panel-text"></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
